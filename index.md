@@ -67,6 +67,8 @@ module.exports = {
 }
 
 ```
+# some errors : "export 'createElementBlock' was not found in 'vue'
+resolution 1:  update vue3.0.0 to the latest version (vue3.2.0 2021/10/9)
 
 
 
