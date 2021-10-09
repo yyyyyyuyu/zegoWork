@@ -41,11 +41,12 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 
 
 [Link]https://github.com/element-plus/unplugin-element-plus    按需引入样式
+
 [Link]https://github.com/antfu/unplugin-vue-components#readme  按需引入组件
 
 
 ### vue.config.js
-
+```markdown
 const {ElementPlusResolver }= require('unplugin-vue-components/resolvers')
 
 module.exports = {
@@ -65,7 +66,7 @@ module.exports = {
   },
 }
 
-
+```
 
 
 
