@@ -35,3 +35,37 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+
+### vue-cli4  + vue3.0  On-demand Import  element-plus
+
+
+[Link]https://github.com/element-plus/unplugin-element-plus    按需引入样式
+[Link]https://github.com/antfu/unplugin-vue-components#readme  按需引入组件
+
+
+### vue.config.js
+
+const {ElementPlusResolver }= require('unplugin-vue-components/resolvers')
+
+module.exports = {
+  configureWebpack: {
+    plugins: [
+      require('unplugin-vue-components/webpack')({
+        resolvers: [ElementPlusResolver()],
+        dts: true,
+        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      }),
+      require('unplugin-element-plus/webpack')({
+        resolvers: [ElementPlusResolver()],
+        dts: true,
+        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      }),
+    ],
+  },
+}
+
+
+
+
+
